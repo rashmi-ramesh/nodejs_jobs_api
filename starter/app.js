@@ -29,6 +29,9 @@ app.use(xss());//cross side scripting - prevents from injecting malicious code
 
 
 // routes
+app.get('/',(res,req)=>{
+  res.send('jobs api')
+})
 app.use('/api/v1/auth',authRouter);
 app.use('/api/v1/jobs',authentication,jobsRouter);
 
